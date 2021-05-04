@@ -1,45 +1,19 @@
-# CRUD Controller
+# CDI and Service
 
-## Rest Controller
+## CDI - `Context Dependency Injection`
 
-Allows for the use of `Request Mapping` to expose methods and provide config for handling requests in a RESTFUL manner
-(namely returning data in a JSON format). 
+The idea of CDI is injecting a dependency into a class at run time. 
 
-### GET Mapping
+We want to make it so that the class is fully closed for modification. 
+Therefore, instead of having concrete implementations, it should depend on abstractions - we use it to reduce coupling between components. 
 
-Used to fetch data - `GET Requests`
+If we had concrete implementations in a class that we later wanted to change, we would be breaking the `O&D` of `SOLID`.
 
-```java
-@GetMapping("/getAll")
-public List<Marvel> getAll(){
-	...
-}
-```
 
-### POST Mapping
+## Service
 
-Used to send data - `POST Requests`
+This is where the logic of our application lives. 
 
-`@RequestBody` -  Data sent in the body of a request can be converted from JSON to a java object by marking a method parameter with @RequestBody.
-Only one parameter can be marked this way.
+We mark our class with a `@Service` Annotation, which tells the `Application Context` that the class is a `Component`.
 
-```java
-@PostMapping("/create")
-public void create(@RequestBody Marvel marvel){
-	...
-}
-```
-
-### DELETE Mapping
-
-Used to delete data - `DELETE Request`
-
-`@PathVariable` - Extracts values from the URL to the request that was sent. 
-The value needs to match exactly. 
-
-```java
-@DeleteMapping("/remove/{id}")
-public Marvel remove(@PathVariable int id){
-	...
-}
-```
+We need to adhere to the `Single Responsibility` principle of SOLID and therefore our `Controller` class mustn't be responsible for handling logic. 
