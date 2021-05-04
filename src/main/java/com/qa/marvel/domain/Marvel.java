@@ -18,6 +18,7 @@ public class Marvel {
 		this.superSoldier = superSoldier;
 	}
 	
+	public Marvel() {}
 	
 	// Methods - GETTERS & SETTERS
 	
