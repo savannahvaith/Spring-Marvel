@@ -1,6 +1,6 @@
 # CRUD Controller
 
-## `@RestController`
+## RestController
 
 Allows for the use of `Request Mapping` to expose methods and provide config for handling requests in a RESTFUL manner
 (namely returning data in a JSON format). 
