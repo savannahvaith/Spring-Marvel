@@ -1,6 +1,6 @@
 # CRUD Controller
 
-## RestController
+## Rest Controller
 
 Allows for the use of `Request Mapping` to expose methods and provide config for handling requests in a RESTFUL manner
 (namely returning data in a JSON format). 
@@ -30,7 +30,7 @@ public void create(@RequestBody Marvel marvel){
 }
 ```
 
-### DELETE
+### DELETE Mapping
 
 Used to delete data - `DELETE Request`
 
