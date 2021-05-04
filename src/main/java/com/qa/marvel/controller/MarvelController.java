@@ -3,6 +3,8 @@ package com.qa.marvel.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,21 +23,23 @@ public class MarvelController {
 	
 	// CREATE
 	@PostMapping("/create")
-	public void createCharacter(@RequestBody Marvel marvel) {
+	public ResponseEntity<Marvel> createCharacter(@RequestBody Marvel marvel) {
 		this.marvelList.add(marvel);
+		Marvel added = this.marvelList.get(this.marvelList.size()-1);
+		return new ResponseEntity<Marvel>(added,HttpStatus.CREATED);
 	}
 	
 	// READ
 	@GetMapping("/getAll")
-	public List<Marvel> getMarvel(){
-		return this.marvelList;
+	public ResponseEntity<List<Marvel>> getMarvel(){
+		return ResponseEntity.ok(this.marvelList);
 	}
 	
 	
 	// READ ONE
 	@GetMapping("/getOne/{index}")
-	public Marvel getCharacterById(@PathVariable int index) {
-		return this.marvelList.get(index);
+	public ResponseEntity<Marvel> getCharacterById(@PathVariable int index) {
+		return ResponseEntity.ok(marvelList.get(index));
 	}
 	
 	// DELETE
