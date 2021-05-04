@@ -36,6 +36,7 @@ public class MarvelApplication {
 		
 		
 		System.out.println(beanbag.getBean("getCurrent"));
+		
 	}
 	
 	
