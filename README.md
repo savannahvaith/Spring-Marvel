@@ -9,3 +9,5 @@ Switch through the different branches to get an in-depth understanding of the co
 * [CDI & Service](https://github.com/savannahvaith/Spring-Marvel/tree/cdi-and-service)
 * [Repo & Entity](https://github.com/savannahvaith/Spring-Marvel/tree/repo-and-entity)
 * [Marvel Service DB](https://github.com/savannahvaith/Spring-Marvel/tree/marvel-service-db)
+* [Custom Queries](https://github.com/savannahvaith/Spring-Marvel/tree/custom-queries)
+* [Profiles](https://github.com/savannahvaith/Spring-Marvel/tree/profiles)
