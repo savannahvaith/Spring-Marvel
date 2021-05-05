@@ -1,12 +1,24 @@
 package com.qa.marvel.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity // Marks as table!
 public class Marvel {
 	
 	// Attributes
+	@Id // PK
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // AUTO INCREMENT
 	private Long id;
+	
 	private String name;
+	
 	private String species; 
+	
 	private boolean dead;
+	
 	private boolean superSoldier;
 	
 	// Constructor
@@ -18,9 +30,11 @@ public class Marvel {
 		this.superSoldier = superSoldier;
 	}
 	
-	public Marvel() {}
+	public Marvel() {
+		// REQUIRED!
+	}
 	
-	// Methods - GETTERS & SETTERS
+	// Methods - GETTERS & SETTERS - REQUIRED!
 	
 	public Long getId() {
 		return id;
