@@ -1,11 +1,7 @@
-# Service DB
+# Custom Queries
 
-Service components are used to store the main *business logic* of a Spring app. 
+Custom Queries are a way for us to write our own code as part of JPQL - Java Persistent Query Language.
 
-Services are annotated with `@Service`
+Spring is smart enough to figure out what the query would be via the method name that is placed in the repository.
 
-The functionality is identical to that of `@Component`, only difference is that
-`@Service` shows that you *intend* to use the class as a Service. 
-
-The Service lives between the `Controller` and `Repo` in the Backend. 
-
+For more control, we could use the @Query('sql statementhere') annotation.
