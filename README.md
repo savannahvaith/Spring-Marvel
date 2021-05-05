@@ -1,7 +1,5 @@
-# Profiles
+# Finished Code
 
-Profiles are used to map different beans to different profiles. They are a way to segregate parts of your application configuration to make it only available in certain environments.
+This branch will contain some of the finished bits of code for the API. 
 
-For the purpose of our application, we have created two environments, test and prod
-
-In the test environment, we have create an in-memory database as for the production environment, we have created a persistent database.
+There are some bits of functionality that have been not been implemented.
