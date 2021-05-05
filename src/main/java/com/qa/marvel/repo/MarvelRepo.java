@@ -8,4 +8,7 @@ import com.qa.marvel.domain.Marvel;
 @Repository
 public interface MarvelRepo extends JpaRepository<Marvel, Long>{
 	
+	// JPQL - Java Persistence Query Language
+	Marvel findByName(String name);
+	
 }
