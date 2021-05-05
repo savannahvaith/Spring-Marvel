@@ -25,7 +25,6 @@ public class MarvelController {
 		this.service = service; 
 	}
 		
-	// CRUD 
 	
 	// CREATE
 	@PostMapping("/create")
