@@ -13,9 +13,9 @@ public interface MarvelService {
 	
 	Marvel create(Marvel m); 
 	List<Marvel> getAll();
-	Marvel getById(int id); 
-	boolean remove(int id); 
-	Marvel update(int id, Marvel newMarvel);
+	Marvel getById(Long id); 
+	boolean remove(Long id); 
+	Marvel update(Long id, Marvel newMarvel);
 	Marvel getCharacterByName(String name); 
 
 }

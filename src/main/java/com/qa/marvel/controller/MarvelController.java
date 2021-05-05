@@ -42,13 +42,13 @@ public class MarvelController {
 	
 	// READ ONE
 	@GetMapping("/getOne/{index}")
-	public ResponseEntity<Marvel> getCharacterById(@PathVariable int index) {
+	public ResponseEntity<Marvel> getCharacterById(@PathVariable Long index) {
 		return ResponseEntity.ok(this.service.getById(index));
 	}
 	
 	// DELETE
 	@DeleteMapping("/remove/{index}")
-	public Marvel removeCharacter(@PathVariable int index) {
+	public Marvel removeCharacter(@PathVariable Long index) {
 		this.service.remove(index);
 		return this.service.getById(index);
 	}

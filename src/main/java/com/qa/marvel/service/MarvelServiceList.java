@@ -6,8 +6,11 @@ import org.springframework.stereotype.Service;
 
 import com.qa.marvel.domain.Marvel;
 
-@Service
+
 public class MarvelServiceList implements MarvelService{
+
+	// THIS FILE WILL NOW BE REDUNDNAT!!!
+	
 	
 	private List<Marvel> marvelList; // <-- dependency
 	
