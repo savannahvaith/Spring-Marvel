@@ -10,6 +10,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.ResultMatcher;
@@ -19,6 +22,8 @@ import com.qa.marvel.domain.Marvel;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT) // load the context
 @AutoConfigureMockMvc
+@Sql(scripts = {"classpath:schema.sql","classpath:data.sql"}, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+@ActiveProfiles("test")
 public class MarvelControllerIntegrationTest {
 	
 	@Autowired
@@ -33,7 +38,7 @@ public class MarvelControllerIntegrationTest {
 //		"superSolider":true
 //	}
 	
-	
+	// RUN SCRIPTS -> RUN TESTS -> RUN SCRIPTS -> RUN TESTS -> REPEAT
 	
 	@Test
 	void testCreate() throws Exception {
@@ -51,7 +56,7 @@ public class MarvelControllerIntegrationTest {
 //				.content(thorAsJSON);
 //		
 //		// Create our "saved" character
-//		Marvel savedThor = new Marvel(1L, "Thor", "Asguardian", false, true);
+//		Marvel savedThor = new Marvel(2L, "Thor", "Asguardian", false, true);
 //		
 //		// Convert "saved" character to json
 //		String savedThorAsJSON = this.mapper.writeValueAsString(savedThor);
@@ -72,7 +77,7 @@ public class MarvelControllerIntegrationTest {
 					.contentType(MediaType.APPLICATION_JSON)
 					.content(this.mapper.writeValueAsString(new Marvel("Thor","Asguardian",false,true))))
 				.andExpect(status().isCreated())
-				.andExpect(content().json(this.mapper.writeValueAsString(new Marvel(1L,"Thor","Asguardian",false,true))));
+				.andExpect(content().json(this.mapper.writeValueAsString(new Marvel(2L,"Thor","Asguardian",false,true))));
 	}
 
 }

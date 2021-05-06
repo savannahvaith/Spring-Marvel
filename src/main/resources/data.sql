@@ -1,0 +1,1 @@
+INSERT INTO `marvel`(`name`,`species`,`dead`,`super_soldier`)VAlUES('Thor','Asguardian',false,true);
