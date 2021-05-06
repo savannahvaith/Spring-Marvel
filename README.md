@@ -1,3 +1,5 @@
-# Pre populationg DB for Testing
+# Unit Tests
 
-Added Scripts to the Integration test to run the schema and data file before running tests. 
+A unit test is a way of testing a small piece of code in the system. 
+In this case, there is an example of the Service that has been unit tested, with Mockito. 
+
