@@ -33,12 +33,26 @@ public class Marvel {
 		this.superSoldier = superSoldier;
 	}
 	
+	// Constructor with ID
+	public Marvel(Long id, @NotNull(message = "Name may not be null") String name, String species, boolean dead,
+			boolean superSoldier) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.species = species;
+		this.dead = dead;
+		this.superSoldier = superSoldier;
+	}
+
+
+
 	public Marvel() {
 		// REQUIRED!
 	}
 	
 	// Methods - GETTERS & SETTERS - REQUIRED!
-	
+
+
 	public Long getId() {
 		return id;
 	}
