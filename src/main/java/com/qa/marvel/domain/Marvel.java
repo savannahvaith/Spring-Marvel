@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
 
 @Entity // Marks as table!
 public class Marvel {
@@ -13,6 +15,7 @@ public class Marvel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // AUTO INCREMENT
 	private Long id;
 	
+	@NotNull(message = "Name may not be null")
 	private String name;
 	
 	private String species; 
