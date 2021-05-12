@@ -15,3 +15,4 @@ Switch through the different branches to get an in-depth understanding of the co
 * [Pre-populating Database](https://github.com/savannahvaith/Spring-Marvel/tree/pre-populating-db)
 * [Unit tests](https://github.com/savannahvaith/Spring-Marvel/tree/unit-tests)
 * [Swagger-and-Static](https://github.com/savannahvaith/Spring-Marvel/tree/swagger-and-static)
+* [Selenium](https://github.com/savannahvaith/Spring-Marvel/tree/selenium)
